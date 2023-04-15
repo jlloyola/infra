@@ -45,7 +45,10 @@ def get_args():
     parser = argparse.ArgumentParser(
         formatter_class=argparse.ArgumentDefaultsHelpFormatter
     )
-    parser.description = "description"
+    parser.description = (
+        "Creates a .zip backup of the src dir and places it at dst dir.\n"
+        "It can rotate backups by removing folders older than x days."
+    )
     parser.add_argument("--src", "-s", help="Source directory", required=True)
     parser.add_argument("--dst", "-d", help="Destination directory", required=True)
     parser.add_argument(
